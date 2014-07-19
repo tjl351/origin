@@ -56,8 +56,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   
-Blog::Application.routes.draw do
-    resources :articles
-    root 'welcome#index'
-    end
+  resources :articles do
+      resources :comments
+  end
 end
